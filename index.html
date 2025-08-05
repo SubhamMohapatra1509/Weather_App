@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pro Weather App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="widget.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌦 Weather App</h1>
+    <div class="search-box">
+      <input type="text" id="locationInput" placeholder="Enter location..." oninput="autoSuggest()">
+      <button onclick="getWeather()">Search</button>
+      <div id="suggestions" class="suggestions"></div>
+    </div>
+
+    <div class="current-weather" id="currentWeather" style="display:none;"></div>
+
+    <div class="hourly" id="hourlyWeather" style="display:none;">
+      <h2>Hourly Forecast</h2>
+      <div class="hourly-scroll" id="hourlyScroll"></div>
+    </div>
+
+    <div class="forecast" id="forecastWeather" style="display:none;">
+      <h2>7-Day Forecast</h2>
+      <div class="forecast-grid" id="forecastGrid"></div>
+    </div>
+  </div>
+
+  <script src="widget.js"></script>
+</body>
+</html>
